@@ -4,7 +4,7 @@ use std::net::SocketAddr;
 lazy_static! {
     static ref CLIENT: volo_gen::mini::redis::MiniRedisServiceClient = {
         let addr: SocketAddr = "127.0.0.1:8080".parse().unwrap();
-        volo_gen::mini::redis::MiniRedisServiceClientBuilder::new("volo-example")
+        volo_gen::mini::redis::MiniRedisServiceClientBuilder::new("redis-test")
             .address(addr)
             .build()
     };
